@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Este es mi portfolio"/>
+    <title>Mi portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css" />
+    <script src="https://kit.fontawesome.com/4374e45425.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header flex w-full fixed top-0 z-1">
+        <nav class="flex justify-content-between w-full navbar container">
+            <span class="logo cursor-pointer" onclick="scrollToSection('home')">
+                <img src="./assets/Logo.png" alt="Logo portfolio">
+            </span>
+            <input type="checkbox" id="menu-toggle" aria-label="Checkbox para mostrar y quitar hamburger menu" class="checkbox xl:hidden"/>
+            <label for="menu-toggle" class="hamburger__lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </label>
+
+
+            <div class="header__info flex align-items-center text-center gap-3">
+                <ul class="flex flex-column xl:flex-row list-none">
+                    <li onclick="scrollToSection('about')">Sobre mi</li>
+                    <li onclick="scrollToSection('knowledge')">Áreas de conocimiento</li>
+                    <li onclick="scrollToSection('portfolio')">Portfolio</li>
+                    <li onclick="scrollToSection('contact')">Contacto</li>
+                </ul>
+
+
+            
+
+                <div class="talkMe__button pt-4">
+                    <a href="mailTo:lucasjaviercastronuovo@gmail.com" aria-label="Enviar mensaje al correo" class="cursor-pointer no-underline border-round-lg text-xl xl:text-sm">Hablemos</a>
+                </div>
+            
+
+            </div>   
+            
+        </nav>
+
+        
+
+
+    </header>
+    
+    <!-- Main content -->
+    <div class="container">
+        <section id="home" class="home__page flex flex-column xl:flex-row align-items-center justify-content-between gap-4">
+            <div class="left__content w-full xl:w-6">
+                <div class="message__bubble triangle mb-4 md:mb-2">
+                    <div class="message__text p-2 sm:p-3 text-center">
+                        <p>Hola, Yo soy</p>
+                    </div>
+                </div>
+                <h1 class="text-3xl sm:text-5xl md:text-7xl">Lucas Javier Castronuovo</h1>
+                <p class="description">
+                    Estudiante de Ingeniería en Informática, en búsqueda de fortalecer mis conocimientos y aprender para crecer profesional y personalmente, aportando valor en cada desafío que enfrente.
+                </p>
+                <div class="home__buttons flex align-items-center gap-2 mt-6">
+                    <a href="./assets/CV Lucas Javier Castronuovo.pdf" alt="curriculum" target="_blank" aria-label="Descargar curriculum" class="cursor-pointer border-round-lg no-underline" download> Descargar CV</a>
+                    <button onclick="scrollToSection('portfolio')" aria-label="Deslizar a sección portfolio para mostrar mis proyectos" class="cursor-pointer border-round-lg">Ver Proyectos</button>
+                </div>
+            </div>
+            <div class="right__content w-9 sm:w-6 xl:w-5">
+                <img src="./assets/Lucas.jpeg" alt="Imagen de Lucas Javier Castronuovo" class="profile__image"/>
+            </div>
+        </section>
+
+        <!-- About me section -->
+        <section id="about" class="about__me md:pt-4 pb-8 px-4 md:px-12">
+            
+            <div class="aboutMe__info mx-auto flex flex-column justify-content-center align-items-center text-center mt-0 pt-0 pb-8">
+                <h1 class="text-3xl md:text-5xl mb-6">Sobre mí</h1>
+                <p class="description mb-6">
+                    Busco comenzar mi desarrollo profesional en IT, aportando valor con mis habilidades técnicas y creciendo en un entorno desafiante.
+                </p>
+
+                <p class="description mb-6">
+                    Actualmente curso el último año de Ingeniería en Informática y tengo una base sólida en programación, lógica y resolución de problemas.
+                </p>
+
+                <p class="description mb-6">
+                    He trabajado en proyectos como bots con Arduino, videojuegos 2D, sistemas desktop y modelos de análisis de datos (Data mining y Data science), además de scripting y consultas SQL/PLSQL.
+                </p>
+
+                <p class="description mb-6">
+                    Me destaco por mi disciplina frente a la complejidad, pensamiento analítico y compromiso con el aprendizaje constante.
+                </p>
+
+                <p class="description font-semibold mb-2">Tecnologías:</p>
+
+                <p class="description">
+                    Java | Python | C | C# | C++ | SQL | PL/SQL | Git | HTML/CSS | JavaScript | Linux (Debian, Ubuntu)
+                </p>
+                
+                
+            </div>
+                
+            
+        </section>
+
+    </div>   
+
+    <!-- LinkedIn section -->
+    <section class="linkedin__profile mb-8 mt-8 min-w-full flex flex-column justify-content-center align-items-center">
+        <h1 class="text-center">Conectemos en LinkedIn</h1>
+        <div class="talkMe__button pt-4">
+            <a href="https://www.linkedin.com/in/lucas-castronuovo/" target="_blank" aria-label="Ir a linkedin" class="cursor-pointer no-underline border-round-lg">Mi perfil</a>
+        </div>
+    </section>
+
+    <!-- Knowledge and skills section -->
+    <div class="container">
+        <section id="knowledge" class="knowledge min-f-full w-full pb-8 pt-8">
+            <div class="knowledge__tittle flex flex-column gap-3 text-center">
+                <h1 class="text-3xl md:text-5xl">Áreas de conocimiento</h1>
+                <p class="description text-sm md:text-base">Mi formación académica y mi constante actualización en diversas tecnologías y herramientas me han permitido consolidar habilidades sólidas en las siguientes áreas de TI</p>
+            </div>
+            
+            <div class="knowledge__card w-full grid grid-nogutter mt-7 gap-5">
+                <div class="card flex align-items-center col-12 sm:col-6 lg:col-4 gap-3 p-2" data-filter="web__development">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fa-brands fa-html5"></i><i class="fa-brands fa-css"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Desarrollo web</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col lg:col-4 gap-3 p-2" data-filter="data__science__models">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Desarrollo de modelos de Data science y Data mining</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col-6 md:col-3 lg:col gap-3 p-2" data-filter="c__programming">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-c"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Programación en C - C# - C++</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col lg:col-4 gap-3 p-2" data-filter="db__management">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Gestión de bases de datos relacionales</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col-6 lg:col-4 gap-3 p-2" data-filter="desktop__development">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Desarrollo desktop</p>
+                    </div>
+                </div>
+                <div class="card flex align-items-center col-12 sm:col md:col-4 lg:col gap-3 p-2" data-filter="linux__terminal">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fa-brands fa-linux"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Terminal y comandos en Linux</p>
+                    </div>
+                </div>
+                
+                
+
+            </div>
+                
+        
+
+        </section>
+
+
+        <section id="other__knowledge" class="other__knowledge w-full py-8">
+            <div class="other__knowledge__title text-center mb-6">
+                <h1 class="text-3xl md:text-5xl">Otras áreas de conocimiento</h1>
+                <p class="description text-sm md:text-base">Áreas adicionales en las que recibí formación</p>
+            </div>
+
+            <div class="other__knowledge__grid flex flex-wrap justify-content-center gap-4">
+                <div class="other__knowledge__card">
+                    <p>Ingeniería de software</p>
+                </div>
+                <div class="other__knowledge__card">
+                    <p>Auditoría de sistemas</p>
+                </div>
+                <div class="other__knowledge__card">
+                    <p>Testing y QA</p>
+                </div>
+                <div class="other__knowledge__card">
+                    <p>Ciberseguridad</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Portfolio section -->
+        <section id="portfolio" class="portfolio min-f-full w-full pb-8 pt-8 mt-8">
+            <div class="portfolio__title flex flex-column gap-3 text-center">
+                <h1 class="text-3xl md:text-5xl">Mis proyectos</h1>
+                <p class="description text-sm md:text-base">Estos son algunos de los proyectos en los que he trabajado con pasión y dedicación. Cada uno refleja mi compromiso con aprender, crear y aportar valor a través de la tecnología.</p>
+
+            </div>
+            <div class="portfolio__gallery">
+                <div class="gallery gallery__projects mb-5 mt-5">
+                    <ul class="flex list-none flex-wrap justify-content-center gap-3">
+                        <li class="filter-item active" data-filter="all">Todos</li>
+                        <li class="filter-item" data-filter="project__game">Videojuego 2D STRAX</li>
+                        <li class="filter-item" data-filter="project__desktop">Sistema desktop</li>
+                        <li class="filter-item" data-filter="project__data__mining">Data mining</li>
+                        <li class="filter-item" data-filter="project__sql__plsql">SQL y PL/SQL</li>
+                        <li class="filter-item" data-filter="project__concurrent__processes">Procesos concurrentes</li>
+                        <li class="filter-item" data-filter="project__bot__arduino">Robot Arduino</li>
+                        <li class="filter-item" data-filter="project__others">Otros proyectos</li>
+                        
+                        
+                    </ul>
+                </div>
+                <div class="project__gallery flex justify-content-center align-items-center flex-wrap gap-3">
+                    <div class="project__card project__game web__development desktop__development c__programming">
+                        <a href="https://github.com/lucascastronuovo/Desarrollo-Videojuego-2D-STRAX" target="_blank" aria-label="Ir al repositorio del proyecto Strax en github">
+                            <img src="./assets/Carta_Strax.png" alt="">
+                            <div class="overlay"></div>
+                            <div class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                                <h2>Diseño y desarrollo de Strax</h2>
+                                <p>Videojuego 2D shooter en C# con Unity, mecánicas de disparo, movimiento y colisiones, gráficos en Photoshop y animaciones básicas</p>
+                                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="project__card project__desktop desktop__development db__management">
+                        <a href="https://github.com/lucascastronuovo/Laboratorio_I/tree/main" target="_blank" aria-label="Ir al repositorio github del proyecto de desarrollo desktop en java">
+                            <img src="./assets/Carta_Desktop.png" alt="">
+                            <div class="overlay"></div>
+                            <div class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                                <h2>Desarrollo desktop en Java</h2>
+                                <p>Proyectos en Java centrados en POO, incluyendo herencia, polimorfismo, encapsulamiento, Sistema de Alumnos y Sistema de Entradas</p>
+                                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project__card project__data__mining data__science__models">
+                        <a href="https://github.com/lucascastronuovo/Analisis-de-la-Informacion-y-Decision" target="_blank" aria-label="Ir al repositorio de data mining en github">
+                            <img src="./assets/Carta_Data_Mining.png" alt="">
+                            <div class="overlay"></div>
+                            <div class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                                <h2>Modelo clustering K-Means</h2>
+                                <p>Trabajo de Data mining en Jupyter Notebook, aplicando Clustering K-means, segmentación de datos, identificación de patrones y análisis estadístico</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project__card project__sql__plsql db__management">
+                        <a href="https://github.com/lucascastronuovo/Laboratorio_II" target="_blank" aria-label="Ir al repositorio SQL y PLSQL en github">
+                            <img src="./assets/Carta_BD.png" alt="">
+                            <div class="overlay"></div>
+                            <div class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                                <h2>Gestión de bases de datos relacionales</h2>
+                                <p>Proyectos en SQL y PL/SQL con procedimientos, funciones, triggers, manejo de excepciones para la gestión de datos</p>
+                                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project__card project__concurrent__processes c__programming linux__terminal">
+                        <a href="https://github.com/lucascastronuovo/Laboratorio_III" target="_blank" aria-label="Ir al repositorio de scripts de procesos concurrentes en github">
+                            <img src="./assets/Carta_C.png" alt="">
+                            <div class="overlay"></div>
+                            <div class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                                <h2>Desarrollo de scripts para optimización de recursos</h2>
+                                <p>Scripts en C para Unix, aplicando paradigmas de programación, gestión de memoria, concurrencia, paralelismo y optimización de recursos con cola de mensajes, semáforos y multihilos, entre otros</p>
+                                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project__card project__bot__arduino c__programming">
+                        <a href="https://github.com/lucascastronuovo/BOTS-Robotica-Arduino-II-Inteligencia-Educativa" target="_blank" aria-label="Ir al repositorio del proyecto bots 2 en github">
+                            <img src="./assets/Carta_Bot.png" alt="">
+                            <div class="overlay"></div>
+                            <div class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                                <h2>Desarrollo de BOTS con Arduino</h2>
+                                <p>Proyectos de robótica educativa con Arduino, integrando sensores y actuadores, incluyendo robot final que emite mensajes en Código Morse y automóvil a control remoto</p>
+                                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project__card project__others">
+                        <a href="https://github.com/lucascastronuovo?tab=repositories" target="_blank" aria-label="Ir a otros repositorios en github">
+                            <img src="./assets/Carta_Git.png" alt="">
+                            <div class="overlay"></div>
+                            <div class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                                <h2>Otros proyectos</h2>
+                                <p>Te invito a ver mis otros proyectos en GitHub</p>
+                                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="gallery gallery__categories mb-5 mt-5">
+                    <ul class="flex list-none flex-wrap justify-content-center gap-3">
+                        <li class="filter-item" data-filter="web__development">Desarrollo web</li>
+                        <li class="filter-item" data-filter="desktop__development">Desarrollo desktop</li>
+                        <li class="filter-item" data-filter="data__science__models">Data mining y Data science</li>
+                        <li class="filter-item" data-filter="db__management">Gestión de bases de datos relacionales</li>
+                        <li class="filter-item" data-filter="c__programming">Programación en C - C# - C++</li>
+                        <li class="filter-item" data-filter="linux__terminal">Terminal y comandos en Linux</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <footer id="contact" class="min-h-full w-full flex grid col-12 justify-content-center pb-8 pt-8 lg:text-center">
+            <div class="social__media col-12 md:col-4 flex flex-column justify-content-between">
+                <h1>Redes sociales</h1>
+                <p>Auténtico e inovador</p>
+                <p>Busco aportar valor a una empresa y poder formarme dando mis primeros pasos</p>
+                <div class="social__mediaIcons mt-5 flex lg:justify-content-center gap-3">
+                    <a href="https://www.linkedin.com/in/lucas-castronuovo/" target="_blank" aria-label="Ir a linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/lucascastronuovo" target="_blank" aria-label="Ir a github">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact col-12 sm:-6 sm:pt-0 md:pt-2 md:col-4 flex flex-column justify-content-between md:align-items-center">
+                <h3>Contacto</h3>
+                <div class="phone__number flex align-items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+54 9 11 3110-2993</p>
+                </div>
+                <div class="email flex align-items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>lucasjaviercastronuovo@gmail.com</p>
+                </div>
+                <a href="mailTo:lucasjaviercastronuovo@gmail.com" class="cursor-pointer text-center col-4 sm:col-6 xl:col-4 mt-3 no-underline border-round-lg">
+                    <span>
+                        <i class="fa-solid fa-message"></i>
+                    </span>Escríbeme
+                </a>
+            </div>
+            <div class="my__knowledge col-12 sm:col-6 sm:p-0 md:col-4 md:pt-2 md:align-items-center flex flex-column justify-content-between">
+                <h3>Mis conocimientos</h3>
+                <p>Desarrollo desktop</p>
+                <p>Desarrollo web</p>
+                <p>Gestión de Bases de datos</p>
+                <p>Data mining</p>
+                <p>Programación en C - C# - C++</p>
+                <p>Terminal y comandos en Linux</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="script.js"></script>
+    
+</body>
+
+
+
+</html>
