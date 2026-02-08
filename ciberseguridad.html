@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Este es mi portfolio"/>
+    <title>Lucas Castronuovo | Portfolio</title>
+    <link rel="icon" type="image/png" href="./assets/Icono.png">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css" />
+    <script src="https://kit.fontawesome.com/4374e45425.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header flex w-full fixed top-0 z-1">
+        <nav class="flex justify-content-between w-full navbar container">
+            <span class="logo cursor-pointer">
+                <a href="index.html" class="card-link">
+                    <img src="./assets/Logo.png" alt="Logo portfolio">
+                </a>
+            </span>
+            <input type="checkbox" id="menu-toggle" aria-label="Checkbox para mostrar y quitar hamburger menu" class="checkbox xl:hidden"/>
+            <label for="menu-toggle" class="hamburger__lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </label>
+
+
+            <div class="header__info flex align-items-center text-center gap-3">
+                <ul class="flex flex-column xl:flex-row list-none">
+                    <li onclick="scrollToSection('home_cyber')">Ciberseguridad</li>
+                    <li onclick="scrollToSection('profile_cyber')">Mi perfil</li>
+                    <li onclick="scrollToSection('professional_experience_cyber')">Experiencia Profesional</li>
+                    <li onclick="scrollToSection('cyberboot_KPMG')">CyberBoot</li>
+                    <li onclick="scrollToSection('knowledge_cyber')">Conocimientos</li>
+                    <li onclick="scrollToSection('contact')">Contacto</li>
+                    <li onclick="window.location.href='ia-data.html'">
+                        IA & Data
+                    </li>
+                </ul>
+
+
+
+
+
+
+
+            </div>
+
+        </nav>
+
+
+
+
+    </header>
+<!-- Container específico para IA -->
+<!-- HERO FULL WIDTH -->
+<section class="cyber-hero"></section>
+
+<!-- CONTENIDO CENTRADO -->
+<div id="home_cyber" class="cyber-container">
+    <section class="cyber-content">
+        <h1>Ciberseguridad</h1>
+       <p>
+            Ciberseguridad, seguridad de la información y gestión de riesgos
+            con enfoque en cumplimiento y mejora continua
+        </p>
+
+
+        <div class="home__buttons flex justify-content-center align-items-center gap-3 mt-8">
+
+    <a href="./assets/GENERAL_CV Lucas Javier Castronuovo.pdf"
+       target="_blank"
+       class="cursor-pointer border-round-lg no-underline"
+       aria-label="Descargar CV de Ciberseguridad" rel="noopener noreferrer">
+        Descargar CV
+    </a>
+
+    
+
+</div>
+    </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container">
+<section id="profile_cyber" class="cyber-section reveal md:pt-4 pb-8 px-4 md:px-12">
+    <div class="cyber-info mx-auto flex flex-column justify-content-center align-items-center text-center pb-8">
+
+        <h1 class="text-3xl md:text-5xl mb-6">
+            Perfil en Ciberseguridad & Seguridad de la Información
+        </h1>
+
+        <p class="description mb-6">
+            Mi enfoque en Ciberseguridad y Seguridad de la Información está orientado
+            a la gestión de riesgos, el cumplimiento normativo y la protección de
+            activos de información en entornos corporativos
+        </p>
+
+        <p class="description mb-6">
+            Actualmente trabajo como Consultor Jr. en Ciberseguridad,
+            participando en actividades de auditoría IT, GRC y seguridad de la información,
+            aplicando marcos y buenas prácticas reconocidas a nivel internacional
+        </p>
+
+        <p class="description mb-6">
+            Me interesa especialmente el diseño y la mejora de controles de seguridad,
+            la gestión de incidentes y la continuidad del negocio, priorizando
+            la prevención, la mejora continua y la alineación entre seguridad y objetivos del negocio
+        </p>
+
+    </div>
+</section>
+</div>
+
+
+<div class="container">
+    <section id="professional_experience_cyber" class="cyber-section reveal pt-12 pb-16 px-4 md:px-12">
+        <div class="cyber-info mx-auto max-w-4xl">
+
+            <h2 class="section-title text-center text-3xl md:text-5xl mb-6">
+                Experiencia Profesional
+            </h2>
+
+            <!-- Card de Experiencia sin descripción -->
+            <div class="experience-card">
+                <div class="card-header flex flex-column md:flex-row justify-content-between align-items-start md:align-items-center">
+                    <div class="brand-group">
+                        <div class="brand-box">
+                            <span class="brand-name">KPMG</span>
+                        </div>
+                        <h3 class="role-title">Consultor Jr. en Ciberseguridad</h3>
+                    </div>
+
+                    <div class="meta-info text-left md:text-right mt-3 md:mt-0">
+                        <p class="duration">Feb 2026 — Presente</p>
+                        <p class="location">Buenos Aires, Argentina</p>
+                    </div>
+                </div>
+
+                
+            </div>
+
+        </div>
+    </section>
+</div>
+
+
+<section id="cyberboot_KPMG" class="cyber-section reveal py-12">
+
+    <div class="cyber-wrapper">
+
+        <div class="cyber-project-header">
+            <!-- Reemplazamos la imagen por un contenedor de Título y Botón -->
+            <div class="cyber-project-content">
+                <h2 class="mb-4">CyberBoot 2025 KPMG</h2>
+
+                <p class="cyber-tagline mb-6">Programa intensivo de formación en Ciberseguridad</p>
+                <p class="cyber-tagline mb-6">Trabajo Práctico <strong>“Road to Cloud”</strong> con Microsoft Entra ID</p>
+
+                <div class="home__buttons flex align-items-center justify-content-center mt-6">
+                    <a href="./assets/Cyberboot-diploma-2025 Lucas Castronuovo.pdf"
+                       target="_blank"
+                       class="cursor-pointer border-round-lg no-underline" rel="noopener noreferrer">
+                        <i class="pi pi-verified mr-2"></i> Ver Certificado Oficial
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="knowledge_cyber" class="cyber-section reveal cyber-stack">
+
+    <div class="cyber-wrapper">
+
+        <h1 class="text-3xl md:text-5xl mb-3">
+            Tecnologías y enfoque en ciberseguridad
+        </h1>
+
+        <p class="description mb-8">
+            Conocimientos y herramientas aplicadas a la seguridad de la información,
+            la gestión de riesgos y el cumplimiento normativo, con un enfoque práctico
+            y alineado a entornos corporativos.
+        </p>
+
+        <div class="cyber-stack-grid">
+
+            <div class="cyber-stack-item">
+                <h3>Gobierno, Riesgo y Cumplimiento (GRC)</h3>
+                <ul>
+                    <li>Gestión de riesgos de IT</li>
+                    <li>Auditoría de sistemas y control interno</li>
+                    <li>Consultoría en ciberseguridad</li>
+                </ul>
+            </div>
+
+            <div class="cyber-stack-item">
+                <h3>Marcos, normas y estándares</h3>
+                <ul>
+                    <li>ISO/IEC 27001, 27002, 27032</li>
+                    <li>NIST CSF, COBIT, ITIL, COSO</li>
+                    <li>SOX, PCI DSS, HIPAA, Basel II/III</li>
+                </ul>
+            </div>
+
+            <div class="cyber-stack-item">
+                <h3>Gestión de seguridad e incidentes</h3>
+                <ul>
+                    <li>SGSI y ciclo PDCA</li>
+                    <li>Análisis de activos, amenazas y vulnerabilidades</li>
+                    <li>Planes de respuesta a incidentes y análisis forense básico</li>
+                </ul>
+            </div>
+
+            <div class="cyber-stack-item mb-8">
+                <h3>Redes, sistemas y criptografía</h3>
+                <ul>
+                    <li>Firewalls, IDS/IPS, VPN, IAM, MFA</li>
+                    <li>Linux, scripting y análisis básico de logs</li>
+                    <li>Criptografía, certificados X.509, TLS/SSL</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+    <div class="container mt-8">
+        <!-- Contact section -->
+        <footer id="contact" class="min-h-full w-full flex grid col-12 justify-content-center pb-8 pt-8 lg:text-center">
+            <div class="social__media col-12 md:col-4 flex flex-column justify-content-between">
+                <h1>Redes sociales</h1>
+                <p>Auténtico e innovador</p>
+                <p>Busco aportar valor a las organizaciones, consolidando mi desarrollo profesional en entornos técnicos y de consultoría</p>
+                <div class="social__mediaIcons mt-5 flex lg:justify-content-center gap-3">
+                    <a href="https://www.linkedin.com/in/lucas-castronuovo/" target="_blank" aria-label="Ir a linkedin" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/lucascastronuovo" target="_blank" aria-label="Ir a github" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact col-12 sm:-6 sm:pt-0 md:pt-2 md:col-4 flex flex-column justify-content-between md:align-items-center">
+                <h3>Contacto</h3>
+                <div class="phone__number flex align-items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+54 9 11 3110-2993</p>
+                </div>
+                <div class="email flex align-items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>lucasjaviercastronuovo@gmail.com</p>
+                </div>
+                <a href="mailto:lucasjaviercastronuovo@gmail.com" class="cursor-pointer text-center col-4 sm:col-6 xl:col-4 mt-3 no-underline border-round-lg">
+                    <span>
+                        <i class="fa-solid fa-message"></i>
+                    </span>Escríbeme
+                </a>
+            </div>
+            <div class="my__knowledge col-12 sm:col-6 sm:p-0 md:col-4 md:pt-2 md:align-items-center flex flex-column justify-content-between">
+                <h3>Mis conocimientos</h3>
+                <p>Inteligencia Artificial</p>
+<p>Análisis de Datos</p>
+<p>Data Mining</p>
+<p>Ciberseguridad</p>
+<p>Gestión de Riesgos</p>
+<p>Scripting en Bash</p>
+<p>Linux y entornos operativos</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+
+
+</html>

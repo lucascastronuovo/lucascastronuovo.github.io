@@ -1,0 +1,1245 @@
+/*General Styles*/
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 4rem;
+}
+
+:root {
+    --bg-color: #080F1A;
+    --font-color: #E5E9F0;
+    --secondary-bg-color: #2C8D88;
+    --font: "Poppins";
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-family: var(--font);
+    height: 100vh;
+    max-width: 100vw;
+
+ overflow-x: hidden;
+}
+
+.container {
+    padding: 0rem 12rem 0 12rem;
+}
+
+/* Container específico para IA */
+.ia-container {
+    max-width: 1200px;      /* evita que se estire demasiado */
+    margin: 0 auto;         /* centra horizontalmente */
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Sección IA: centrado y espacio desde header */
+#ia-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;            /* espacio entre título, imagen y botón */
+    padding-top: 8rem;    /* separa del header fijo */
+    padding-bottom: 4rem;
+}
+
+/* Ajuste de título para no colapsar */
+#ia-data h1 {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Imagen centrada */
+#ia-data img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Botón centrado */
+#ia-data a {
+    display: inline-block;
+    margin: 1rem auto 0 auto;
+}
+
+/* HERO full width (rompe el container sin romper el sitio) */
+.ia-hero {
+    width: 100%;
+    height: 55vh;
+
+    background-image: url("./assets/Banner_IA&DATA.png");
+    background-size: cover;
+    background-position: center;
+
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+/* Evita scroll horizontal por el 100vw */
+
+/* CONTENIDO debajo de la imagen */
+.ia-content {
+    max-width: 900px;
+    margin: 4rem auto 0;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.ia-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+}
+
+.ia-content p {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    opacity: 0.85;
+}
+
+/* Wrapper común para secciones IA */
+.ia-section {
+    margin-top: 12rem;   /* 👈 separación real */
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.ia-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ia-info {
+    max-width: 900px;
+}
+
+.reveal  {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ia-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.ia-project-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 6.5rem;
+
+    flex-wrap: nowrap; /* 👈 CLAVE: evita que se vaya arriba */
+}
+
+/* Título */
+.ia-project-header h2 {
+    font-size: clamp(3.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Logo */
+.ia-project-logo {
+    width: 400px;
+    height: auto;
+    flex-shrink: 0; /* 👈 evita que se achique */
+}
+
+.ia-project-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ia-project-cta {
+    display: flex;
+    justify-content: flex-start; /* o center si querés */
+}
+
+.ia-stack h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.ia-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 3.5rem;
+    margin-top: 2rem;
+}
+
+.ia-stack-item h3 {
+    margin-bottom: 1rem;
+    color: var(--secondary-bg-color);
+    font-size: 1.1rem;
+}
+
+.ia-stack-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.ia-stack-item li {
+    margin-bottom: 0.6rem;
+    opacity: 0.85;
+}
+
+.ia-stack-item {
+    text-align: center;
+}
+
+/* Si el último item queda solo, lo centramos */
+.ia-stack-item:last-child {
+    grid-column: 1 / -1;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .ia-project-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ia-project-header h2 {
+        text-align: center;
+    }
+}
+
+.cyber-hero {
+    width: 100%;
+    height: 55vh;
+
+    background-image: url("./assets/Banner_Ciberseguridad.png");
+    background-size: cover;
+    background-position: center;
+
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.cyber-section {
+    margin-top: 12rem;   /* 👈 separación real */
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.cyber-section {
+    font-family: var(--font), sans-serif;
+    color: var(--font-color);
+}
+
+.experience-card {
+    /* Fondo ligeramente más claro que el bg principal para dar profundidad */
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid var(--secondary-bg-color);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 6px solid var(--secondary-bg-color);
+}
+
+/* El reemplazo del logo usando el azul oficial sobre blanco para contraste */
+.brand-box {
+    background: #00338D;
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.brand-name {
+    color: #FFFFFF; /* Azul oficial KPMG para legitimidad */
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+}
+
+.role-title {
+    color: var(--font-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.duration {
+    color: var(--secondary-bg-color);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.location {
+    color: #8892b0; /* Gris sutil para info secundaria */
+    font-size: 0.85rem;
+}
+
+/* Tags de habilidades */
+.tech-tags {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tech-tags span {
+    /* Usamos el color secundario con transparencia para el fondo del tag */
+    background: rgba(44, 141, 136, 0.15);
+    color: var(--secondary-bg-color);
+    border: 1px solid var(--secondary-bg-color);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Variables ya definidas en tu root */
+
+/* Wrapper y Secciones Cyber */
+.cyber-section {
+    margin-top: 8rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.cyber-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cyber-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.cyber-project-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px; /* Le da aire al botón grande */
+    background: rgba(44, 141, 136, 0.03); /* Un toque sutil del color secundario */
+    border: 1px dashed rgba(44, 141, 136, 0.2);
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.cyber-project-content h2 {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 700;
+    color: var(--font-color);
+    margin: 0;
+}
+
+.cyber-tagline {
+    color: #8892b0;
+    font-size: 1.2rem;
+}
+
+/* Animación Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Wrapper común para secciones Ciberseguridad */
+.cyber-section {
+    margin-top: 12rem;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.cyber-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cyber-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.cyber-stack h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.cyber-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 3.5rem;
+    margin-top: 2rem;
+}
+
+.cyber-stack-item {
+    text-align: center;
+}
+
+.cyber-stack-item h3 {
+    margin-bottom: 1rem;
+    color: var(--secondary-bg-color);
+    font-size: 1.1rem;
+}
+
+.cyber-stack-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.cyber-stack-item li {
+    margin-bottom: 0.6rem;
+    opacity: 0.85;
+}
+
+/* Si el último item queda solo, lo centramos */
+.cyber-stack-item:last-child {
+    grid-column: 1 / -1;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* Container específico para ciberseguridad */
+.cyber-container {
+    max-width: 1200px;      /* evita que se estire demasiado */
+    margin: 0 auto;         /* centra horizontalmente */
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.cyber-content {
+    max-width: 900px;
+    margin: 4rem auto 0;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.cyber-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+}
+
+.cyber-content p {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    opacity: 0.85;
+}
+
+@media (max-width: 640px) {
+    .cyber-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.github-cta {
+    display: flex;
+    justify-content: center;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    padding: 1.2rem 2rem;
+    border-radius: 14px;
+
+    text-decoration: none;
+    color: var(--font-color);
+
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+.github-link i {
+    font-size: 2.4rem;
+}
+
+.github-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.github-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.github-desc {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* Hover elegante */
+.github-link:hover {
+    transform: translateY(-4px);
+    background: rgba(44, 141, 136, 0.12);
+    border-color: var(--secondary-bg-color);
+}
+
+.video-demo {
+    max-width: 900px;
+    margin: 6rem auto 0;
+    text-align: center;
+}
+
+.video-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.video-description {
+    opacity: 0.85;
+    margin-bottom: 2rem;
+}
+
+.video-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.9rem 2rem;
+    border-radius: 12px;
+    background-color: var(--secondary-bg-color);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.video-cta:hover {
+    transform: scale(1.05);
+    background-color: transparent;
+    border: 2px solid var(--secondary-bg-color);
+    color: var(--secondary-bg-color);
+}
+
+@media screen and (max-width: 768px) {
+
+    .github-cta {
+        margin-bottom: 4rem; /* empuja bien hacia abajo */
+    }
+
+    .video-demo {
+        margin-top: 8rem;       /* evitamos doble margen */
+        padding-top: 2rem;   /* separación controlada */
+    }
+
+    .video-title {
+        margin-top: 0;
+    }
+}
+
+.interactions-section {
+    max-width: 900px;
+    margin: 6rem auto 0;
+    text-align: center;
+}
+
+/* === TÍTULO IGUAL AL VIDEO DEMO === */
+.interactions-title {
+   font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* === DESCRIPCIÓN IGUAL AL VIDEO DEMO === */
+.interactions-description {
+    opacity: 0.85;
+    margin-bottom: 2rem;
+}
+
+/* === IMÁGENES GRANDES Y PROTAGÓNICAS === */
+.interactions-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.interactions-gallery img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.project-images {
+  width: 100%;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 16px;
+  object-fit: contain;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3rem;
+    grid-auto-rows: 1fr; /* 🔥 CLAVE REAL */
+}
+
+.insight-card {
+  background: #2C8D88;
+  padding: 1.5rem;
+  border-radius: 16px;
+
+  display: grid;
+  grid-template-rows: auto 1fr; /* 🔑 CLAVE */
+}
+
+.insight-card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.insight-card ul {
+  padding-left: 1.2rem;
+  padding-top: 1rem;
+  margin: 0; /* 🔥 IMPORTANTE */
+}
+
+.insight-card li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.dataset-link {
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.dataset-link a {
+  color: var(--secondary-bg-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.dataset-link a:hover {
+  border-bottom: 1px solid var(--secondary-bg-color);
+}
+
+.project-block {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.block-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.block-description {
+  text-align: center;
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        padding: 70px 2rem 0 2rem;
+    }
+
+}
+
+/*Header Styles*/
+
+.navbar {
+    width: 120px;
+    height: auto;
+    position: relative;
+}
+
+.logo img {
+    width: 240px;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.header{
+    background-color: var(--bg-color);
+
+}
+
+.header__info ul li {
+    padding: 2.5rem 1.2rem 1rem 1.2rem;
+    cursor: pointer;
+}
+
+.talkMe__button a {
+    background-color: var(--secondary-bg-color);
+    color: var(--font-color);
+    font-family: var(--font);
+    font-size: small;
+    padding: 1rem 1.5rem;
+    border-radius: unset;
+    border-width: 0;
+}
+
+.header__info ul li:hover {
+    background-color: var(--secondary-bg-color);
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar {
+        padding: 0 2rem;
+    }
+
+    .navbar .checkbox {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 32px;
+        top: 2rem;
+        right:2rem;
+        z-index: 1000;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar .hamburger__lines{
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 1010;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .navbar .hamburger__lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        top: 2rem;
+        border-radius: 10px;
+        background: #fff;
+    }
+
+    .navbar .hamburger__lines .line1{
+
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar .hamburger__lines .line2{
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar .hamburger__lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .header__info ul li {
+        padding: 0;
+        margin: 2rem;
+        cursor: pointer;
+        font-size: x-large;
+    }
+
+    .header__info ul li:hover {
+        background-color: unset;
+    }
+
+    .header__info {
+        padding-top: 120px;
+        height: 100vh;
+        background: var(--secondary-bg-color);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        overflow: auto;
+        transform: translateX(150%);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.5s ease-in-out;
+        z-index: 500;
+    }
+
+    .navbar input[type="checkbox"]:checked {
+        transform: translateX(0);
+    }
+
+    .navbar input[type="checkbox"]:checked ~ .hamburger__lines .line1 {
+        transform: rotate(45deg);
+    }
+
+    .navbar input[type="checkbox"]:checked ~ .hamburger__lines .line2 {
+        transform: scaleY(0);
+    }
+
+    .navbar input[type="checkbox"]:checked ~ .hamburger__lines .line3 {
+        transform: rotate(-45deg);
+    }
+
+    .checkbox:checked ~ .header__info {
+        transform: translateX(0);
+    }
+
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px){
+    .navbar {
+        padding: 0 12rem;
+    }
+
+    .navbar .checkbox, .navbar .hamburger__lines {
+        right: 12rem;
+    }
+
+}
+
+/*Home Page Styles*/
+
+.description {
+    color: #c0c0c0;
+    font-size: larger;
+}
+
+.right__content img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.home__page {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.message__bubble {
+    display: inline-block;
+    position: relative;
+    width: 180px;
+    height: auto;
+    background-color: var(--secondary-bg-color);
+}
+
+.triangle:after {
+    content: "";
+    position: absolute;
+    left: 40%;
+    border: 15px solid;
+    border-color: var(--secondary-bg-color) transparent transparent transparent;
+}
+
+.message__text{
+    padding: 1rem;
+}
+
+.home__buttons button{
+    padding: 1rem 2rem;
+    color: var(--font-color);
+}
+
+.home__buttons a{
+    background-color: var(--secondary-bg-color);
+    font-size: 0.9rem;
+    color: #fff;
+    padding: 1rem 1.5rem;
+}
+
+.home__buttons button{
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-width: thin;
+    font-family: var(--font);
+    font-size: 0.9rem;
+    color: #fff;
+    padding: 1rem 1.5rem;
+}
+
+@media screen and (max-width: 576px) {
+    .message__bubble{
+        width: 160px;
+    }
+
+    .home__buttons a {
+        padding: 1rem 1rem !important;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .home__page {
+        padding-top: 10rem;
+    }
+
+}
+
+.profile__image {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+    .profile__image {
+        width: 300px;
+        height: 300px;
+    }
+
+}
+
+.about__me{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about__me.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* LinkedIn Style */
+
+.linkedin__profile {
+    height: 50vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(./assets/LinkedIn.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Knowledge and Skills Styles */
+
+.specialization-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.specialization-btn {
+    width: 460px;
+    min-height: 350px;         /* aumenta altura para separar logo y texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;                 /* separa logo y texto */
+}
+
+.specialization-btn p {
+    height: 4.8rem;              /* NO min-height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.specialization-btn .card-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.specialization__card{
+    padding-top: 81px;
+}
+
+.card {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-width: thin;
+    font-family: var(--font);
+    font-size: 0.9rem;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+.card-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-decoration: none;
+    color: inherit;            /* mantiene color del card */
+    width: 100%;
+    height: 100%;
+}
+
+.service__logo {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service__logo i {
+    font-size: 4rem;
+    color: #a3a3a3;
+    transition: all 0.2s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+
+    .service__logo {
+        width: 56px;
+        height: 56px;
+    }
+
+    .service__logo i {
+        font-size: 1.4rem;
+    }
+
+    .specialization-btn p {
+        font-size: 0.95rem;
+        line-height: 1.3;
+        margin-top: 0.5rem;
+    }
+
+    .specialization-btn .card-link {
+        gap: 0.75rem;
+    }
+}
+
+.card:hover {
+    background-color: var(--secondary-bg-color);
+}
+
+.card:hover .service__logo {
+    background-color: #fff;
+}
+
+.card:hover .service__logo i {
+    color: #000;
+}
+
+.other__knowledge {
+    background-color: #0B132B;
+    color: #E5E9F0;
+}
+
+.other__knowledge__grid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.other__knowledge__card {
+    flex: 1 1 200px;
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid #2C8D88;
+    border-radius: 0.5rem;
+    background-color: rgba(44, 141, 136, 0.1);
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.other__knowledge__card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(44, 141, 136, 0.2);
+}
+
+/* Portfolio Styles */
+
+.gallery ul li {
+    font-size: small;
+    cursor: pointer;
+}
+
+.gallery .filter-item.active{
+    border-bottom: 1px solid var(--secondary-bg-color);
+}
+
+.project__card {
+    width: 245px;
+    height: 350px;
+    display: block;
+    position: relative;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--secondary-bg-color);
+}
+
+.project__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.project__card .overlay {
+    background-color: rgba(44, 141, 136, 0.9);
+    backdrop-filter: blur(2.7px);
+    -webkit-backdrop-filter: blur(2.7px);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.project__card .project__info {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out 0s;
+
+}
+
+.project__card a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.project__card .project__info p{
+    font-size: small;
+    margin-top: 2rem;
+}
+
+.project__card .fa-arrow-right-long {
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.project__card:hover .project__info {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.project__card:hover .overlay {
+    opacity: 1;
+}
+
+.project__card.hide {
+    display: none;
+}
+
+.project__card.show{
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Contact Styles */
+
+footer {
+    border-top: 2px solid #fff;
+}
+
+:is(.social__media, .contact, .my__knowledge) h3 {
+    margin-bottom: 1rem;
+}
+
+:is(.social__media, .contact, .my__knowledge) p,
+:is(.fa-phone, .fa-envelope, .fa-message, .fa-brands) {
+    color: #a3a3a3;
+}
+
+.social__mediaIcons .fa-brands {
+    font-size: 2rem;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+.social__mediaIcons .fa-brands:hover {
+    color: var(--secondary-bg-color);
+}
+
+.contact a {
+    padding: 0.5rem 1.8rem;
+    background-color: unset;
+    border: 1px solid var(--secondary-bg-color);
+    font-family: var(--font);
+    font-size: 0.9rem;
+    color: #a3a3a3;
+}

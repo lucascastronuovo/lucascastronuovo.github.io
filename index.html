@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Este es mi portfolio"/>
+    <title>Lucas Castronuovo | Portfolio</title>
+    <link rel="icon" type="image/png" href="./assets/Icono.png">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css" />
+    <script src="https://kit.fontawesome.com/4374e45425.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header flex w-full fixed top-0 z-1">
+        <nav class="flex justify-content-between w-full navbar container">
+            <span class="logo cursor-pointer" onclick="scrollToSection('home')">
+                <img src="./assets/Logo.png" alt="Logo portfolio">
+            </span>
+            <input type="checkbox" id="menu-toggle" aria-label="Checkbox para mostrar y quitar hamburger menu" class="checkbox xl:hidden"/>
+            <label for="menu-toggle" class="hamburger__lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </label>
+
+
+            <div class="header__info flex align-items-center text-center gap-3">
+                <ul class="flex flex-column xl:flex-row list-none">
+                    <li onclick="scrollToSection('about')">Sobre mi</li>
+                    <li onclick="scrollToSection('knowledge')">Áreas de especialización</li>
+                    <li onclick="scrollToSection('portfolio')">Proyectos</li>
+                    <li onclick="scrollToSection('contact')">Contacto</li>
+                </ul>
+
+
+
+
+                <div class="talkMe__button pt-4">
+                    <a href="mailto:lucasjaviercastronuovo@gmail.com" aria-label="Enviar mensaje al correo" class="cursor-pointer no-underline border-round-lg text-xl xl:text-sm">Hablemos</a>
+                </div>
+
+
+            </div>
+
+        </nav>
+
+
+
+
+    </header>
+
+    <!-- Main content -->
+    <div class="container">
+        <section id="home" class="home__page flex flex-column xl:flex-row align-items-center justify-content-between gap-4">
+            <div class="left__content w-full xl:w-6">
+                <div class="message__bubble triangle mb-4 md:mb-2">
+                    <div class="message__text p-2 sm:p-3 text-center">
+                        <p>Hola, Yo soy</p>
+                    </div>
+                </div>
+                <h1 class="text-3xl sm:text-5xl md:text-7xl">Lucas Javier Castronuovo</h1>
+
+<p class="description">
+    Estudiante avanzado de Ingeniería en Informática y Consultor Jr. en Ciberseguridad en KPMG Argentina, con formación en Inteligencia Artificial, Análisis de Datos y Seguridad de la Información
+</p>
+
+                <div class="home__buttons flex align-items-center gap-2 mt-6">
+                    <a href="./assets/GENERAL_CV Lucas Javier Castronuovo.pdf" target="_blank" aria-label="Descargar curriculum" class="cursor-pointer border-round-lg no-underline" download rel="noopener noreferrer">Descargar CV</a>
+                    <button onclick="scrollToSection('portfolio')" aria-label="Deslizar a sección portfolio para mostrar mis proyectos" class="cursor-pointer border-round-lg">Ver Proyectos</button>
+                </div>
+            </div>
+            <div class="right__content w-9 sm:w-6 xl:w-5">
+                <img src="./assets/Lucas.jpeg" alt="Imagen de Lucas Javier Castronuovo" class="profile__image"/>
+            </div>
+        </section>
+
+        <!-- About me section -->
+        <section id="about" class="about__me reveal md:pt-4 pb-8 px-4 md:px-12">
+
+            <div class="aboutMe__info mx-auto flex flex-column justify-content-center align-items-center text-center mt-0 pt-0 pb-8">
+                <h1 class="text-3xl md:text-5xl mb-6">Sobre mí</h1>
+
+<p class="description mb-6">
+    Soy estudiante avanzado de Ingeniería en Informática y actualmente me desempeño como Consultor Jr. en Ciberseguridad en KPMG Argentina
+</p>
+
+<p class="description mb-6">
+    Mi formación académica se centra en la Inteligencia Artificial, el Análisis de Datos y la Ciberseguridad, integrando enfoques analíticos, técnicos y de Seguridad de la Información
+</p>
+
+<p class="description mb-6">
+    En el área de datos e IA, he desarrollado proyectos de análisis y segmentación mediante modelos de clustering (K-Means), diseño de Data Warehouse y un Trabajo Final de Grado basado en una arquitectura RAG aplicada a la educación
+</p>
+
+<p class="description mb-6">
+    En paralelo, he adquirido conocimientos en ciberseguridad orientados a la Seguridad de la Información, la auditoría de sistemas y la gestión de riesgos, trabajando con marcos de referencia como ISO/IEC 27001 y NIST CSF. Actualmente amplío mis conocimientos, habilidades y experiencia profesional en KPMG Argentina
+</p>
+
+<p class="description mb-6">
+    Me caracterizo por un fuerte pensamiento analítico, responsabilidad profesional y compromiso con el aprendizaje continuo en entornos académicos y corporativos
+</p>
+
+<p class="description font-semibold mb-2">Áreas de conocimiento:</p>
+
+<p class="description">
+    Inteligencia Artificial | Análisis de Datos | Machine Learning | Ciberseguridad | Gestión de Riesgos | Auditoría TI | ISO/IEC 27000 | NIST CSF | Scripting en Bash | Linux | Python
+</p>
+
+
+
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+
+    <!-- Specialization section -->
+    <div class="container">
+        <section id="knowledge" class="knowledge min-f-full w-full pb-8 pt-8">
+            <div class="knowledge__title flex flex-column gap-3 text-center">
+                <h1 class="text-3xl md:text-5xl">Áreas de especialización</h1>
+                <p class="description text-sm md:text-base">Mi formación académica y profesional están orientadas en las siguientes áreas de TI</p>
+            </div>
+
+            <div class="specialization-buttons">
+
+    <div class="card specialization-btn">
+    <a href="ia-data.html" class="card-link">
+        <div class="service__logo">
+<i class="fa-solid fa-share-nodes"></i>
+        </div>
+        <p>Inteligencia Artificial & Análisis de Datos</p>
+         </a>
+    </div>
+
+
+    <div class="card specialization-btn">
+    <a href="ciberseguridad.html" class="card-link">
+        <div class="service__logo">
+            <i class="fa fa-shield"></i>
+        </div>
+        <p>Ciberseguridad</p>
+    </a>
+    </div>
+
+</div>
+
+
+
+
+        </section>
+
+    </div>
+
+
+    <div class="container">
+    <section id="professional_experience_cyber" class="cyber-section reveal pt-12 pb-16 px-4 md:px-12">
+        <div class="cyber-info mx-auto max-w-4xl">
+
+            <h2 class="section-title text-center text-3xl md:text-5xl mb-6">
+                Experiencia Profesional
+            </h2>
+
+            <!-- Card de Experiencia sin descripción -->
+            <div class="experience-card">
+                <div class="card-header flex flex-column md:flex-row justify-content-between align-items-start md:align-items-center">
+                    <div class="brand-group">
+                        <div class="brand-box">
+                            <span class="brand-name">KPMG Argentina</span>
+                        </div>
+                        <h3 class="role-title">Consultor Jr. en Ciberseguridad</h3>
+                    </div>
+
+                    <div class="meta-info text-left md:text-right mt-3 md:mt-0">
+                        <p class="duration">Feb 2026 — Presente</p>
+                        <p class="location">Buenos Aires, Argentina</p>
+                    </div>
+                </div>
+
+                
+            </div>
+
+        </div>
+    </section>
+</div>
+
+ <section id="tfg_ia" class="ia-section reveal">
+
+    <div class="ia-wrapper">
+
+        <div class="ia-project-header">
+            <img src="assets/boTeach.png" alt="boTeach logo" class="ia-project-logo">
+
+            <div class="ia-project-title">
+        <h2>Trabajo Final de Grado boTeach</h2>
+
+        <div class="home__buttons flex align-items-center justify-content-center gap-2 mt-6">
+            <div class="ia-project-cta">
+    <a href="boteach.html"
+       class="cursor-pointer border-round-lg no-underline">
+        Ver proyecto
+    </a>
+</div>
+        </div>
+
+    </div>
+        </div>
+
+        <p class="description mb-6">
+            boTeach es mi Trabajo Final de Grado, donde desarrollé una solución de
+            Inteligencia Artificial aplicada a la educación
+        </p>
+
+        <p class="description mb-6">
+            El objetivo del proyecto es actuar como un tutor auxiliar, asistiendo a
+            estudiantes mediante pistas sobre materiales educativos en formato PDF,
+            para que puedan llegar a la respuesta por sus propios medios
+        </p>
+
+        <p class="description">
+            El sistema utiliza una arquitectura RAG (Retrieval-Augmented Generation),
+            integrando procesamiento de lenguaje natural y modelos de IA para la
+            recuperación y generación contextual de información educativa
+        </p>
+
+    </div>
+
+</section>
+
+<section id="cyberboot_KPMG" class="cyber-section reveal py-12">
+
+    <div class="cyber-wrapper">
+
+        <div class="cyber-project-header">
+            <!-- Reemplazamos la imagen por un contenedor de Título y Botón -->
+            <div class="cyber-project-content">
+                <h2 class="mb-4">CyberBoot 2025 KPMG</h2>
+
+                <p class="cyber-tagline mb-6">Programa intensivo de formación en Ciberseguridad</p>
+                <p class="cyber-tagline mb-6">Trabajo Práctico <strong>“Road to Cloud”</strong> con Microsoft Entra ID</p>
+
+                <div class="home__buttons flex align-items-center justify-content-center mt-6">
+                    <a href="./assets/Cyberboot-diploma-2025 Lucas Castronuovo.pdf"
+                       target="_blank"
+                       class="cursor-pointer border-round-lg no-underline" rel="noopener noreferrer">
+                        <i class="pi pi-verified mr-2"></i> Ver Certificado Oficial
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+    <div class="container">
+
+        <!-- Portfolio section -->
+        <section id="portfolio" class="portfolio min-f-full w-full pb-8 pt-8 mt-8">
+            <div class="portfolio__title flex flex-column gap-3 text-center">
+                <h1 class="text-3xl md:text-5xl">Mis proyectos</h1>
+                <p class="description text-sm md:text-base mb-6">Estos son algunos de los proyectos en los que he trabajado con pasión y dedicación. Cada uno refleja mi compromiso con aprender, crear y aportar valor a través de la tecnología.</p>
+
+            </div>
+            <div class="portfolio__gallery">
+
+                <div class="project__gallery flex justify-content-center align-items-center flex-wrap gap-3">
+                    <div class="project__card">
+                        <a href="boteach.html" aria-label="Ir a proyecto boTeach">
+                            <img src="./assets/Carta_boTeach.png" alt="">
+                            <div class="overlay"></div>
+                            <div class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                                <h2>Chatbot educativo RAG boTeach</h2>
+                                <p>Tutor virtual educativo basado en arquitectura RAG, con evaluación de comprensión semántica y ejecución 100% local</p>
+                                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project__card">
+                        <a href="clustering.html" aria-label="Ir a proyecto Modelo clustering K-Means">
+                            <img src="./assets/Carta_Cluster.png" alt="">
+                            <div class="overlay"></div>
+                            <div class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                                <h2>Modelo clustering K-Means</h2>
+                                <p>Análisis y segmentación de clientes mediante clustering K-Means, incluyendo EDA, feature engineering y visualización de resultados</p>
+                                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project__card">
+                        <a href="dw_bi.html" aria-label="Ir a proyecto Diseño de data warehouse y análisis BI para ventas">
+                            <img src="./assets/Carta_DW.png" alt="">
+                            <div class="overlay"></div>
+                            <div class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                                <h2>Diseño de data warehouse y análisis BI para ventas</h2>
+                                <p>Diseño de Data Warehouse con modelo dimensional, procesos ETL y análisis de métricas de ventas</p>
+                                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project__card">
+                        <a href="https://github.com/lucascastronuovo?tab=repositories" target="_blank" aria-label="Ir a otros repositorios en github" rel="noopener noreferrer">
+                            <img src="./assets/Carta_GitHub.png" alt="">
+                            <div class="overlay"></div>
+                            <div class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                                <h2>Otros proyectos</h2>
+                                <p>Te invito a ver mis otros proyectos en GitHub</p>
+                                <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <footer id="contact" class="min-h-full w-full flex grid col-12 justify-content-center pb-8 pt-8 lg:text-center">
+            <div class="social__media col-12 md:col-4 flex flex-column justify-content-between">
+                <h1>Redes sociales</h1>
+                <p>Auténtico e innovador</p>
+                <p>Busco aportar valor a las organizaciones, consolidando mi desarrollo profesional en entornos técnicos y de consultoría</p>
+                <div class="social__mediaIcons mt-5 flex lg:justify-content-center gap-3">
+                    <a href="https://www.linkedin.com/in/lucas-castronuovo/" target="_blank" aria-label="Ir a linkedin" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/lucascastronuovo" target="_blank" aria-label="Ir a github" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact col-12 sm:-6 sm:pt-0 md:pt-2 md:col-4 flex flex-column justify-content-between md:align-items-center">
+                <h3>Contacto</h3>
+                <div class="phone__number flex align-items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+54 9 11 3110-2993</p>
+                </div>
+                <div class="email flex align-items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>lucasjaviercastronuovo@gmail.com</p>
+                </div>
+                <a href="mailto:lucasjaviercastronuovo@gmail.com" class="cursor-pointer text-center col-4 sm:col-6 xl:col-4 mt-3 no-underline border-round-lg">
+                    <span>
+                        <i class="fa-solid fa-message"></i>
+                    </span>Escríbeme
+                </a>
+            </div>
+            <div class="my__knowledge col-12 sm:col-6 sm:p-0 md:col-4 md:pt-2 md:align-items-center flex flex-column justify-content-between">
+                <h3>Mis conocimientos</h3>
+
+                    <p>Inteligencia Artificial</p>
+                    <p>Análisis de Datos</p>
+                    <p>Data Mining</p>
+                    <p>Ciberseguridad</p>
+                    <p>Gestión de Riesgos</p>
+                    <p>Scripting en Bash</p>
+                    <p>Linux y entornos operativos</p>
+
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+
+
+</html>

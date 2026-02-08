@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Este es mi portfolio"/>
+    <title>Lucas Castronuovo | Portfolio</title>
+    <link rel="icon" type="image/png" href="./assets/Icono.png">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css" />
+    <script src="https://kit.fontawesome.com/4374e45425.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header flex w-full fixed top-0 z-1">
+  <nav class="flex justify-content-between w-full navbar container">
+
+    <!-- LOGO -->
+    <span class="logo cursor-pointer">
+      <a href="index.html" class="card-link">
+        <img src="./assets/Logo.png" alt="Logo portfolio">
+      </a>
+    </span>
+
+    <!-- HAMBURGER -->
+    <input
+      type="checkbox"
+      id="menu-toggle"
+      aria-label="Checkbox para mostrar y quitar hamburger menu"
+      class="checkbox xl:hidden"
+    />
+
+    <label for="menu-toggle" class="hamburger__lines">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </label>
+
+    <!-- NAV -->
+    <div class="header__info flex align-items-center text-center gap-3">
+
+      <ul class="flex flex-column xl:flex-row list-none">
+        <li onclick="scrollToSection('home_boteach')">Proyecto</li>
+
+        <li onclick="window.location.href='ia-data.html'">
+            IA & Data
+        </li>
+
+        <li onclick="window.location.href='ciberseguridad.html'">
+            Ciberseguridad
+        </li>
+
+        <li onclick="scrollToSection('contact')">Contacto</li>
+      </ul>
+
+
+
+    </div>
+  </nav>
+</header>
+
+
+    <!-- Main content -->
+    <div class="container">
+        <section
+  id="home_boteach"
+  class="home__page flex flex-column align-items-center justify-content-center gap-4 text-center"
+>
+  <div class="container">
+
+    <h1 class="text-3xl sm:text-5xl md:text-7xl mt-6">
+      Proyecto boTeach
+    </h1>
+
+    <p class="description mb-6 mt-6">
+      boTeach es un chatbot educativo que desarrollé como Trabajo Final de Grado de la carrera de Ingeniería Informática. El proyecto consiste en un tutor virtual inteligente capaz de acompañar a los estudiantes durante su proceso de estudio utilizando exclusivamente sus propios apuntes en PDF
+    </p>
+
+    <p class="description">
+A diferencia de los chatbots tradicionales, boTeach no entrega respuestas directas. Su enfoque pedagógico está inspirado en el rol de un docente: Enseñar a pensar, guiando al estudiante mediante pistas, fomentando la reflexión y evaluando su comprensión real del contenido
+    </p>
+
+
+    <div class="github-cta mt-8">
+    <a href="https://github.com/lucascastronuovo"
+       target="_blank"
+       class="github-link"
+       aria-label="Ver repositorio del proyecto en GitHub" rel="noopener noreferrer">
+
+        <i class="fa-brands fa-github"></i>
+
+        <div class="github-text">
+            <span class="github-title">Ver repositorio en GitHub</span>
+            <span class="github-desc">
+                Accedé al código fuente y a la documentación del proyecto
+            </span>
+        </div>
+
+    </a>
+</div>
+
+
+  </div>
+</section>
+
+<div class="video-demo mt-10 mb-8">
+
+  <h2 class="video-title">Demo del proyecto</h2>
+
+  <p class="video-description">
+    Video de demostración del funcionamiento de boTeach,
+    mostrando el flujo de interacción y el enfoque pedagógico del tutor virtual
+  </p>
+
+  <div class="video-wrapper">
+    <video controls preload="metadata">
+      <source src="./assets/boTeach.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5
+    </video>
+  </div>
+
+  <a
+    href="https://www.youtube.com/watch?v=h9GGZ5DeR-g"
+    target="_blank"
+    class="video-cta"
+    aria-label="Ver demo completa en YouTube"
+   rel="noopener noreferrer">
+    ▶ Ver demo completa en YouTube
+  </a>
+
+</div>
+
+
+
+<div class="interactions-section mt-10 mb-8">
+
+  <h2 class="interactions-title">
+    Interacciones con boTeach
+  </h2>
+
+  <p class="interactions-description mb-6 mt-2">
+    Capturas reales del flujo de interacción entre el estudiante y boTeach,
+    mostrando el enfoque pedagógico basado en pistas y razonamiento guiado.
+  </p>
+
+  <div class="interactions-gallery">
+    <img src="./assets/Interaccion1.png" alt="Interacción boTeach 1">
+    <img src="./assets/Interaccion2.png" alt="Interacción boTeach 2">
+    <img src="./assets/Interaccion3.png" alt="Interacción boTeach 3">
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+        <!-- Contact section -->
+        <footer id="contact" class="min-h-full w-full flex grid col-12 justify-content-center pb-8 pt-8 lg:text-center">
+            <div class="social__media col-12 md:col-4 flex flex-column justify-content-between">
+                <h1>Redes sociales</h1>
+                <p>Auténtico e innovador</p>
+                <p>Busco aportar valor a las organizaciones, consolidando mi desarrollo profesional en entornos técnicos y de consultoría</p>
+                <div class="social__mediaIcons mt-5 flex lg:justify-content-center gap-3">
+                    <a href="https://www.linkedin.com/in/lucas-castronuovo/" target="_blank" aria-label="Ir a linkedin" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/lucascastronuovo" target="_blank" aria-label="Ir a github" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact col-12 sm:-6 sm:pt-0 md:pt-2 md:col-4 flex flex-column justify-content-between md:align-items-center">
+                <h3>Contacto</h3>
+                <div class="phone__number flex align-items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+54 9 11 3110-2993</p>
+                </div>
+                <div class="email flex align-items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>lucasjaviercastronuovo@gmail.com</p>
+                </div>
+                <a href="mailto:lucasjaviercastronuovo@gmail.com" class="cursor-pointer text-center col-4 sm:col-6 xl:col-4 mt-3 no-underline border-round-lg">
+                    <span>
+                        <i class="fa-solid fa-message"></i>
+                    </span>Escríbeme
+                </a>
+            </div>
+            <div class="my__knowledge col-12 sm:col-6 sm:p-0 md:col-4 md:pt-2 md:align-items-center flex flex-column justify-content-between">
+                <h3>Mis conocimientos</h3>
+                <p>Inteligencia Artificial</p>
+<p>Análisis de Datos</p>
+<p>Data Mining</p>
+<p>Ciberseguridad</p>
+<p>Gestión de Riesgos</p>
+<p>Scripting en Bash</p>
+<p>Linux y entornos operativos</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+
+
+</html>
